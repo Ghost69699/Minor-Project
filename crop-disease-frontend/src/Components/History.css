@@ -1,0 +1,9 @@
+.history-box {
+  width: 400px;
+  margin: 30px auto;
+}
+
+.history-box ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}

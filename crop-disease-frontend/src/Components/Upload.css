@@ -1,0 +1,39 @@
+.main {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.upload-btn {
+  display: inline-block;
+  padding: 20px 50px;
+  font-size: 22px;
+  background: #4caf50;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.upload-btn:hover {
+  transform: scale(1.05);
+  background: #2e7d32;
+}
+
+.preview {
+  margin-top: 10px;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+.result {
+  margin: 30px auto;
+  width: 380px;
+  padding: 20px;
+  background: rgba(8, 49, 9, 0.8); /* green tint with opacity */
+  border-radius: 12px;
+  color: white; /* text color */
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* optional shadow */
+}
+

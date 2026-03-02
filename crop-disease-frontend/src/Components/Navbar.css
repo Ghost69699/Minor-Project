@@ -1,0 +1,30 @@
+.navbar {
+  position: fixed;       /* Sticks at the top */
+  top: 0;
+  left: 0;
+  width: 95%;           /* Full page width */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: #2e7d32;   /* Green bar */
+  color: white;
+  z-index: 1000;         /* On top of everything */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.nav-buttons button {
+  margin-left: 15px;
+  padding: 10px 18px;
+  border: none;
+  background: #4caf50;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.nav-buttons button:hover {
+  background: #2e7d32;
+}

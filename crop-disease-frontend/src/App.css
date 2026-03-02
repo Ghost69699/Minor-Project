@@ -1,0 +1,85 @@
+/* Full page background with overlay */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+}
+
+#root {
+  min-height: 100%;
+}
+
+/* Background image */
+body {
+  background: url("/photo4.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Overlay for darkening background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: -1;
+}
+
+/* Glass card styling */
+.glass {
+  background: rgba(255, 255, 255, 0.25); /* more opaque */
+  backdrop-filter: blur(15px);           /* stronger blur */
+  border-radius: 15px;
+  padding: 25px 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35); /* shadow for contrast */
+  color: #ffffff;                        /* white text */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* subtle border */
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+
+/* Center main section */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 50px 20px;
+}
+/* Slightly bigger box, centered horizontally, below navbar */
+.panel {
+  margin: 200px auto 30px auto;   /* space below navbar */
+  background: rgba(0, 0, 0, 0.6); /* darker glass for contrast */
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 35px 45px;
+  color: white;
+  max-width: 700px;    /* bigger than before but not full page */
+  width: 90%;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* Heading */
+.panel h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 26px;
+  text-align: center;
+}
+
+/* Paragraphs */
+.panel p, .panel ul {
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+/* List items spacing */
+.panel ul li {
+  margin-bottom: 6px;
+}
