@@ -1,6 +1,6 @@
 import "./Navbar.css";
 
-function Navbar({ currentPage, goHome, goDetect }) {
+function Navbar({ currentPage, goHome, goDetect, scrollToDisease }) {
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -21,6 +21,22 @@ function Navbar({ currentPage, goHome, goDetect }) {
           >
             <span>Home</span>
           </button>
+
+
+          <button 
+            className={`nav-btn ${currentPage === "about" ? "active" : ""}`} 
+            onClick={scrollToDisease} 
+            title="View disease cards"
+          >
+            <span>About</span>
+          </button>
+          
+
+
+
+
+
+
           <button 
             className={`nav-btn ${currentPage === "detect" ? "active" : ""}`} 
             onClick={goDetect} 

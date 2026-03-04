@@ -74,7 +74,12 @@ function Home({ goDetect }) {
               <span className="tab-icon">📋</span>
               All Problems
             </button>
-            <button className="tab-btn">
+            <button className="tab-btn" onClick={() => {
+              const diseaseCards = document.getElementById("diseaseCardsRing");
+              if (diseaseCards) {
+                diseaseCards.scrollIntoView({ behavior: "smooth" });
+              }
+            }}>
               <span className="tab-icon">🦠</span>
               Diseases
             </button>

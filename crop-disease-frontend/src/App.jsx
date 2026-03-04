@@ -23,11 +23,23 @@ function App() {
   // Go to home
   const goHome = () => {
     setCurrentPage("home");
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   // Go to detect
   const goDetect = () => {
     setCurrentPage("detect");
+  };
+
+  // Go to about and scroll to info-section
+  const scrollToDisease = () => {
+    setCurrentPage("about");
+    setTimeout(() => {
+      const infoSection = document.querySelector(".info-section");
+      if (infoSection) {
+        infoSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
   };
 
   return (
@@ -37,10 +49,11 @@ function App() {
         currentPage={currentPage}
         goHome={goHome}
         goDetect={goDetect}
+        scrollToDisease={scrollToDisease}
       />
 
       {/* Home Page */}
-      {currentPage === "home" && (
+      {(currentPage === "home" || currentPage === "about") && (
         <Home goDetect={goDetect} />
       )}
 
