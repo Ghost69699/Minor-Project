@@ -329,10 +329,9 @@
 .info-container {
   max-width: 1400px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 80px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
 }
 
 .info-text {
@@ -382,29 +381,76 @@
   transform: translateX(4px);
 }
 
+/* Disease Cards Horizontal Scroll */
+.disease-cards-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 20px 0;
+  scroll-behavior: smooth;
+}
+
+.disease-cards-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.disease-cards-wrapper::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+.disease-cards-wrapper::-webkit-scrollbar-thumb {
+  background: #1db8a8;
+  border-radius: 10px;
+}
+
+.disease-cards-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #0f766e;
+}
+
 .disease-cards {
-  display: grid;
+  display: flex;
   gap: 24px;
+  padding: 0 40px;
+  min-width: min-content;
+  animation: slowScroll 70s linear infinite;
+}
+
+@keyframes slowScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .disease-card {
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-  border: 1px solid #e2e8f0;
+  flex: 0 0 320px;
+  height: auto;
+  background: white;
+  border: 1px solid #e5e7eb;
   border-radius: 16px;
-  padding: 28px;
+  padding: 40px 24px;
   text-align: center;
   transition: all 0.3s ease;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.08),
+    0 4px 8px rgba(0, 0, 0, 0.06),
+    0 8px 16px rgba(0, 0, 0, 0.04);
 }
 
 .disease-card:hover {
   border-color: #1db8a8;
-  box-shadow: 0 12px 32px rgba(29, 184, 168, 0.12);
-  transform: translateY(-4px);
-  background: white;
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 10px 20px rgba(29, 184, 168, 0.15),
+    0 15px 30px rgba(29, 184, 168, 0.1);
+  transform: translateY(-6px);
 }
 
 .disease-icon {
@@ -544,8 +590,23 @@
     font-size: 28px;
   }
 
-  .trust-indicators {
-    gap: 30px;
+  .disease-cards-wrapper {
+    overflow-x: auto;
+  }
+
+  .disease-cards {
+    gap: 20px;
+    padding: 0 30px;
+    animation: slowScroll 70s linear infinite;
+  }
+
+  .disease-card {
+    flex: 0 0 280px;
+    padding: 30px 20px;
+  }
+
+  .info-container {
+    gap: 50px;
   }
 }
 
@@ -623,6 +684,17 @@
 
   .disease-card {
     padding: 20px;
+    flex: 0 0 260px;
+  }
+
+  .disease-cards-wrapper {
+    padding: 15px 0;
+  }
+
+  .disease-cards {
+    gap: 16px;
+    padding: 0 20px;
+    animation: slowScroll 60s linear infinite;
   }
 
   .features-section {

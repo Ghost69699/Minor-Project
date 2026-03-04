@@ -104,26 +104,65 @@ function Home({ goDetect }) {
             </p>
 
             
+            
           </div>
 
-          <div className="disease-cards">
-            <div className="disease-card">
-              <div className="disease-icon">🍃</div>
-              <h3>Leaf Spot</h3>
-              <p>Circular brown or black spots on leaves caused by fungal infections</p>
-              <span className="disease-severity common">Common</span>
-            </div>
-            <div className="disease-card">
-              <div className="disease-icon">❄️</div>
-              <h3>Powdery Mildew</h3>
-              <p>White powdery coating on plant surfaces, typically fungal</p>
-              <span className="disease-severity very-common">Very Common</span>
-            </div>
-            <div className="disease-card">
-              <div className="disease-icon">🌱</div>
-              <h3>Root Rot</h3>
-              <p>Decaying roots causing yellowing, wilting, and plant death</p>
-              <span className="disease-severity critical">Critical</span>
+          <div className="disease-cards-wrapper">
+            <div className="disease-cards" id="diseaseCardsRing">
+              <div className="disease-card card-1">
+                <div className="disease-icon">🍃</div>
+                <h3>Leaf Spot</h3>
+                <p>Circular brown or black spots on leaves caused by fungal infections</p>
+                <span className="disease-severity common">Common</span>
+              </div>
+              <div className="disease-card card-2">
+                <div className="disease-icon">❄️</div>
+                <h3>Powdery Mildew</h3>
+                <p>White powdery coating on plant surfaces, typically fungal</p>
+                <span className="disease-severity very-common">Very Common</span>
+              </div>
+              <div className="disease-card card-3">
+                <div className="disease-icon">🌱</div>
+                <h3>Root Rot</h3>
+                <p>Decaying roots causing yellowing, wilting, and plant death</p>
+                <span className="disease-severity critical">Critical</span>
+              </div>
+              <div className="disease-card card-4">
+                <div className="disease-icon">🦠</div>
+                <h3>Rust</h3>
+                <p>Orange, red, or brown pustules on leaf undersides and stems</p>
+                <span className="disease-severity common">Common</span>
+              </div>
+              <div className="disease-card card-5">
+                <div className="disease-icon">🍂</div>
+                <h3>Early Blight</h3>
+                <p>Concentric rings on older leaves, brown spots spreading upward</p>
+                <span className="disease-severity very-common">Very Common</span>
+              </div>
+              <div className="disease-card card-6">
+                <div className="disease-icon">💧</div>
+                <h3>Damping Off</h3>
+                <p>Seedling stems wilt and collapse near soil line</p>
+                <span className="disease-severity common">Common</span>
+              </div>
+              <div className="disease-card card-7">
+                <div className="disease-icon">🍁</div>
+                <h3>Anthracnose</h3>
+                <p>Dark sunken lesions with pink spore masses on fruit and leaves</p>
+                <span className="disease-severity very-common">Very Common</span>
+              </div>
+              <div className="disease-card card-8">
+                <div className="disease-icon">🌾</div>
+                <h3>Septoria Leaf Spot</h3>
+                <p>Small gray spots with dark borders and black pycnidia</p>
+                <span className="disease-severity common">Common</span>
+              </div>
+              <div className="disease-card card-9">
+                <div className="disease-icon">⚫</div>
+                <h3>Black Spot</h3>
+                <p>Black lesions with yellow halos on rose and fruit tree leaves</p>
+                <span className="disease-severity critical">Critical</span>
+              </div>
             </div>
           </div>
         </div>
