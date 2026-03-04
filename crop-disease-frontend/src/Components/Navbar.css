@@ -85,8 +85,14 @@
   color: #ff9800;
 }
 
-.nav-btn:active {
-  background: #ffe0b2;
+.nav-btn.active {
+  background: #ff9800;
+  color: white;
+}
+
+.nav-btn.active:hover {
+  background: #f57c00;
+  color: white;
 }
 
 @media (max-width: 768px) {
