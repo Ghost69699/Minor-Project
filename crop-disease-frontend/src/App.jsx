@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import Upload from "./Components/Upload";
+import Footer from "./Components/Footer";
 import "./App.css";
 
 function App() {
@@ -47,6 +48,9 @@ function App() {
       {currentPage === "detect" && (
         <Upload addHistory={addHistory} reset={uploadReset} />
       )}
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 }
