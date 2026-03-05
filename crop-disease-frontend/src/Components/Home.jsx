@@ -197,6 +197,39 @@ function Home({ goDetect }) {
           </div>
         </div>
       </div>
+
+      {/* ML Models Section */}
+      <div className="ml-models-section">
+        <div className="ml-models-container">
+          <h2>Machine Learning Models Used</h2>
+          <p>Our system leverages state-of-the-art machine learning models to ensure accurate and reliable plant disease identification.</p>
+          <div className="ml-models-grid">
+            <div className="ml-model-card">
+              <h3>ConvNeXt</h3>
+              <p>Accuracy: 97.5%</p>
+              <p>A modernized architecture for image classification, optimized for high performance.</p>
+            </div>
+            <div className="ml-model-card">
+              <h3>ResNet</h3>
+              <p>Accuracy: 96.8%</p>
+              <p>Deep residual networks that improve training efficiency and accuracy.</p>
+            </div>
+            <div className="ml-model-card">
+              <h3>SegFormer</h3>
+              <p>Accuracy: 95.2%</p>
+              <p>A transformer-based model for semantic segmentation, ideal for precise disease localization.</p>
+            </div>
+            <div className="ml-model-card">
+              <h3>EfficientNet</h3>
+              <p>Accuracy: 94.7%</p>
+              <p>A highly efficient model that balances accuracy and computational cost.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      
     </div>
   );
 }
